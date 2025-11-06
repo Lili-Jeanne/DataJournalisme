@@ -1,205 +1,223 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carte des Coiffeurs en Dordogne </title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; height: 100vh; overflow: hidden; }
-        .container { display: flex; height: 100vh; }
-        .sidebar {
-            width: 350px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white; padding: 30px; overflow-y: auto; box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-        }
-        h1 { font-size: 24px; margin-bottom: 10px; font-weight: 600; }
-        .subtitle { font-size: 14px; opacity: 0.9; margin-bottom: 30px; }
-        .stats, .legend {
-            background: rgba(255,255,255,0.15); backdrop-filter: blur(10px);
-            border-radius: 12px; padding: 20px; margin-bottom: 25px;
-        }
-        .stat-item { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 15px; }
-        .stat-item:last-child { margin-bottom: 0; }
-        .stat-value { font-weight: bold; font-size: 18px; }
-        .filters { margin-bottom: 25px; }
-        .filter-title { font-size: 16px; font-weight: 600; margin-bottom: 15px; }
-        .filter-btn {
-            width: 100%; padding: 12px; margin-bottom: 10px; border: 2px solid rgba(255,255,255,0.3);
-            background: rgba(255,255,255,0.1); color: white; border-radius: 8px; cursor: pointer;
-            font-size: 14px; font-weight: 500; transition: all 0.3s;
-        }
-        .filter-btn:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
-        .filter-btn.active { background: white; color: #667eea; border-color: white; }
-        .legend-item { display: flex; align-items: center; margin-bottom: 12px; font-size: 14px; }
-        .legend-color { width: 20px; height: 20px; border-radius: 50%; margin-right: 10px; border: 2px solid white; }
-        .with-site { background: #10b981; }
-        .without-site { background: #ef4444; }
-        #map { flex: 1; height: 100vh; }
-        .loading {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            background: white; padding: 30px 50px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); z-index: 9999;
-            text-align: center;
-        }
-        .loading-spinner {
-            width: 50px; height: 50px; border: 4px solid #f3f3f3; border-top: 4px solid #667eea;
-            border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 15px;
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .popup-content { min-width: 200px; }
-        .popup-address { font-weight: 600; margin-bottom: 8px; color: #1f2937; }
-        .popup-site { display: flex; align-items: center; gap: 5px; font-size: 13px; }
-        .popup-site.has-site { color: #10b981; }
-        .popup-site.no-site { color: #ef4444; }
-        .popup-link { color: #667eea; text-decoration: none; font-size: 12px; display: block; margin-top: 8px; }
-        .popup-link:hover { text-decoration: underline; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartes des Coiffeurs en Dordogne</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; height: 100vh; overflow: hidden; }
+.container { display: flex; height: 100vh; }
+.sidebar { width: 320px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; overflow-y: auto; box-shadow: 2px 0 10px rgba(0,0,0,0.1); }
+h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
+.subtitle { font-size: 13px; opacity: 0.9; margin-bottom: 20px; }
+.stats { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 10px; padding: 15px; margin-bottom: 20px; }
+.stat-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px; }
+.stat-value { font-weight: bold; font-size: 16px; }
+.map-selector { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 10px; padding: 15px; margin-bottom: 20px; }
+.map-selector h3 { font-size: 15px; margin-bottom: 12px; }
+.map-btn { width: 100%; padding: 10px; margin-bottom: 8px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 500; transition: all 0.3s; }
+.map-btn:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+.map-btn.active { background: white; color: #667eea; border-color: white; }
+.filters { margin-bottom: 20px; }
+.filter-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+.filter-btn { width: 100%; padding: 10px; margin-bottom: 8px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 500; transition: all 0.3s; }
+.filter-btn:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+.filter-btn.active { background: white; color: #667eea; border-color: white; }
+.legend { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 10px; padding: 15px; }
+.legend-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+.legend-item { display: flex; align-items: center; margin-bottom: 10px; font-size: 13px; }
+.legend-color { width: 18px; height: 18px; border-radius: 50%; margin-right: 10px; border: 2px solid white; }
+.with-site { background: #10b981; }
+.without-site { background: #ef4444; }
+.heatmap-legend { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 10px; padding: 15px; margin-top: 15px; display:none; }
+.heatmap-gradient { height: 20px; border-radius: 4px; margin-top: 10px; background: linear-gradient(to right, #0000ff, #00ff00, #ff0000); }
+.heatmap-labels { display: flex; justify-content: space-between; font-size: 11px; margin-top: 5px; }
+.maps-container { flex: 1; display: flex; flex-direction: column; }
+#map-interactive, #map-heatmap { height: 100%; display: none; }
+#map-interactive.active, #map-heatmap.active { display: block; }
+.popup-content { min-width: 200px; }
+.popup-address { font-weight: 600; margin-bottom: 8px; color: #1f2937; font-size: 13px; }
+.popup-siren { font-size: 12px; color: #6b7280; margin-bottom: 8px; }
+.popup-site { display: flex; align-items: center; gap: 5px; font-size: 12px; }
+.popup-site.has-site { color: #10b981; }
+.popup-site.no-site { color: #ef4444; }
+.popup-link { color: #667eea; text-decoration: none; font-size: 11px; display: block; margin-top: 6px; }
+.popup-link:hover { text-decoration: underline; }
+.loading { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 25px 40px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); z-index: 9999; text-align: center; }
+.loading-spinner { width: 40px; height: 40px; border: 3px solid #f3f3f3; border-top: 3px solid #667eea; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 12px; }
+#loading-counter { font-weight: bold; font-size: 16px; margin-top: 8px; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <h1>🗺️ Coiffeurs en Dordogne</h1>
-            <p class="subtitle">Analyse de présence en ligne</p>
-            <div class="stats">
-                <div class="stat-item"><span>Total:</span><span class="stat-value" id="total-count">0</span></div>
-                <div class="stat-item"><span>Avec site web:</span><span class="stat-value" id="with-site-count" style="color:#10b981">0</span></div>
-                <div class="stat-item"><span>Sans site web:</span><span class="stat-value" id="without-site-count" style="color:#ef4444">0</span></div>
-            </div>
 
-            <div class="filters">
-                <div class="filter-title">Filtrer par:</div>
-                <button class="filter-btn active" onclick="filterMarkers('all')">Tous les coiffeurs</button>
-                <button class="filter-btn" onclick="filterMarkers('with')">Avec site web uniquement</button>
-                <button class="filter-btn" onclick="filterMarkers('without')">Sans site web uniquement</button>
-            </div>
+<div class="container">
+    <div class="sidebar">
+        <h1>🗺️ Coiffeurs en Dordogne</h1>
+        <p class="subtitle">Analyse de présence en ligne</p>
 
-            <div class="legend">
-                <div class="legend-title">Légende</div>
-                <div class="legend-item"><div class="legend-color with-site"></div><span>Avec site internet</span></div>
-                <div class="legend-item"><div class="legend-color without-site"></div><span>Sans site internet</span></div>
-            </div>
+        <div class="stats">
+            <div class="stat-item"><span>Total:</span><span class="stat-value" id="total-count">0</span></div>
+            <div class="stat-item"><span>Avec site web:</span><span class="stat-value" id="with-site-count" style="color:#10b981">0</span></div>
+            <div class="stat-item"><span>Sans site web:</span><span class="stat-value" id="without-site-count" style="color:#ef4444">0</span></div>
         </div>
-        <div id="map"></div>
+
+        <div class="map-selector">
+            <h3>Type de carte</h3>
+            <button class="map-btn active" onclick="switchMap('interactive', event)">📍 Carte interactive</button>
+            <button class="map-btn" onclick="switchMap('heatmap', event)">🔥 Carte de chaleur (sans site)</button>
+        </div>
+
+        <div class="filters">
+            <div class="filter-title">Filtrer par:</div>
+            <button class="filter-btn active" onclick="filterMarkers('all', event)">Tous les coiffeurs</button>
+            <button class="filter-btn" onclick="filterMarkers('with', event)">Avec site web</button>
+            <button class="filter-btn" onclick="filterMarkers('without', event)">Sans site web</button>
+        </div>
+
+        <div class="legend">
+            <div class="legend-title">Légende</div>
+            <div class="legend-item"><div class="legend-color with-site"></div><span>Avec site internet</span></div>
+            <div class="legend-item"><div class="legend-color without-site"></div><span>Sans site internet</span></div>
+        </div>
+
+        <div class="heatmap-legend" id="heatmap-legend">
+            <div class="legend-title">Intensité de la chaleur</div>
+            <div class="heatmap-gradient"></div>
+            <div class="heatmap-labels">
+                <span>Faible</span>
+                <span>Élevé</span>
+            </div>
+            <p style="font-size: 11px; margin-top: 10px; opacity: 0.9;">
+                Plus la zone est rouge, plus il y a d'entreprises sans site web
+            </p>
+        </div>
     </div>
 
-    <div class="loading" id="loading">
-        <div class="loading-spinner"></div>
-        <p>Chargement des données...</p>
+    <div class="maps-container">
+        <div id="map-interactive" class="active"></div>
+        <div id="map-heatmap"></div>
     </div>
+</div>
+
+<div class="loading" id="loading">
+    <div class="loading-spinner"></div>
+    <p>Chargement des données...</p>
+    <p id="loading-counter">000 / 000</p>
+</div>
 
 <script>
-let map;
-let markers = [];
-let allData = [];
-let currentFilter = 'all';
+let mapInteractive, mapHeatmap, markers = [], heatmapLayer, allData = [], currentFilter = 'all';
 
-async function initMap() {
-    map = L.map('map').setView([45.1847, 0.7213], 10);
+async function initMaps() {
+    mapInteractive = L.map('map-interactive').setView([45.1847, 0.7213], 10);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors', maxZoom: 19 }).addTo(mapInteractive);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors',
-        maxZoom: 19
-    }).addTo(map);
+    mapHeatmap = L.map('map-heatmap').setView([45.1847, 0.7213], 10);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors', maxZoom: 19 }).addTo(mapHeatmap);
 
-    const response = await fetch('data.csv');
-    const csvText = await response.text();
-
-    // On commence à traiter et afficher en temps réel
-    processDataLive(csvText);
-}
-
-function parseCSV(csv) {
-    const lines = csv.trim().split('\n');
-    const data = [];
-    for (let i = 1; i < lines.length; i++) {
-        const values = lines[i].split(',');
-        if (values.length >= 4) {
-            const hasSite = values[2] && values[2].includes('http');
-            data.push({
-                siren: values[0],
-                url_pappers: values[1],
-                site_web: values[2],
-                address: values[3],
-                hasSite
-            });
-        }
-    }
-    return data;
-}
-
-async function geocodeAddress(address) {
     try {
-        const cleanAddress = address.trim() + ', France';
-        const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(cleanAddress)}`;
-        await new Promise(resolve => setTimeout(resolve, 500)); // évite le blocage API
-        const response = await fetch(url);
-        const data = await response.json();
+        const response = await fetch('data_geocoded.csv');
+        if (!response.ok) throw new Error('data_geocoded.csv introuvable');
+        const csvText = await response.text();
+        await processData(csvText);
+    } catch(e) {
+        console.error(e);
+        document.getElementById('loading').style.display = 'none';
+    }
+}
 
-        if (data && data.length > 0) {
-            return { lat: parseFloat(data[0].lat), lon: parseFloat(data[0].lon) };
+async function processData(csvText){
+    const lines = csvText.trim().split('\n');
+    const total = lines.length - 1;
+    const counterElem = document.getElementById('loading-counter');
+    const totalElem = document.getElementById('total-count');
+    const withElem = document.getElementById('with-site-count');
+    const withoutElem = document.getElementById('without-site-count');
+
+    allData = [];
+    let withSite = 0, withoutSite = 0;
+
+    for(let i=1; i<lines.length; i++){
+        const values = lines[i].split(',');
+        if(values.length>=6){
+            const lat = parseFloat(values[4]);
+            const lon = parseFloat(values[5]);
+            if(!isNaN(lat) && !isNaN(lon)){
+                const siteWeb = values[2].trim();
+                const hasSite = siteWeb.includes('http') && !siteWeb.includes('Non');
+                const item = { siren: values[0], url_pappers: values[1], site_web: siteWeb, address: values[3], lat, lon, hasSite };
+                allData.push(item);
+                addMarker(item);
+
+                if(hasSite) withSite++; else withoutSite++;
+
+                // mise à jour des compteurs en temps réel
+                totalElem.textContent = allData.length;
+                withElem.textContent = withSite;
+                withoutElem.textContent = withoutSite;
+                counterElem.textContent = `${i.toString().padStart(3,'0')} / ${total.toString().padStart(3,'0')}`;
+            }
         }
-    } catch (error) {
-        console.error('Geocoding error:', error);
-    }
-    return null;
-}
-
-async function processDataLive(csvText) {
-    allData = parseCSV(csvText);
-    let withSite = 0;
-    let withoutSite = 0;
-    let processed = 0;
-
-    for (let item of allData) {
-    item.lat = parseFloat(values[3]);
-    item.lon = parseFloat(values[4]);
-
-
-        // Mise à jour affichage dans la barre latérale
-        document.getElementById('total-count').textContent = processed;
-        document.getElementById('with-site-count').textContent = withSite;
-        document.getElementById('without-site-count').textContent = withoutSite;
+        if(i % 50 === 0) await new Promise(r=>setTimeout(r,1));
     }
 
-    // On enlève le message de chargement à la fin
-    document.getElementById('loading').style.display = 'none';
+    const heatmapData = allData.filter(d=>!d.hasSite).map(d=>[d.lat,d.lon,1]);
+    heatmapLayer = L.heatLayer(heatmapData, { radius:getDynamicRadius(mapHeatmap.getZoom()), blur:15, maxZoom:18, gradient:{0:'#0000ff',0.5:'#00ff00',1:'#ff0000'} }).addTo(mapHeatmap);
+    mapHeatmap.on('zoomend', ()=>heatmapLayer.setOptions({ radius:getDynamicRadius(mapHeatmap.getZoom()) }));
+
+    document.getElementById('loading').style.display='none';
 }
 
-function addMarker(item) {
-    const color = item.hasSite ? '#10b981' : '#ef4444';
+function getDynamicRadius(zoom){ return Math.min(40, Math.max(5, zoom*3)); }
 
-    const icon = L.divIcon({
-        html: `<div style="background-color:${color}; width:12px; height:12px; border-radius:50%; border:2px solid white;"></div>`,
-        iconSize: [12, 12],
-        iconAnchor: [6, 6]
-    });
-
-    const marker = L.marker([item.lat, item.lon], { icon }).addTo(map);
-
-    const popup = `
-        <div class="popup-content">
-            <div class="popup-address">${item.address}</div>
-            <div class="popup-site ${item.hasSite ? 'has-site' : 'no-site'}">
-                ${item.hasSite ? '✓ Site web disponible' : '✗ Pas de site web'}
-            </div>
-            ${item.hasSite ? `<a href="${item.site_web}" target="_blank" class="popup-link">Visiter le site →</a>` : ''}
-            <a href="${item.url_pappers}" target="_blank" class="popup-link">Voir sur Pappers →</a>
-        </div>
-    `;
-
-    marker.bindPopup(popup);
+function addMarker(item){
+    const color = item.hasSite?'#10b981':'#ef4444';
+    const icon = L.divIcon({ html:`<div style="background-color:${color}; width:12px; height:12px; border-radius:50%; border:2px solid white;"></div>`, iconSize:[12,12], iconAnchor:[6,6], className:'' });
+    const marker = L.marker([item.lat,item.lon],{icon}).addTo(mapInteractive);
+    marker.bindPopup(`<div class="popup-content">
+        <div class="popup-address">${item.address}</div>
+        <div class="popup-siren">SIREN: ${item.siren}</div>
+        <div class="popup-site ${item.hasSite?'has-site':'no-site'}">${item.hasSite?'✓ Site web disponible':'✗ Pas de site web'}</div>
+        ${item.hasSite?`<a href="${item.site_web}" target="_blank" class="popup-link">Visiter le site →</a>`:''}
+        <a href="${item.url_pappers}" target="_blank" class="popup-link">Voir sur Pappers →</a>
+    </div>`);
+    marker.itemData = item;
     markers.push(marker);
 }
 
-function filterMarkers(filter) {
+function filterMarkers(filter,e){
     currentFilter = filter;
-    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
+    document.querySelectorAll('.filter-btn').forEach(btn=>btn.classList.remove('active'));
+    e.target.classList.add('active');
+    markers.forEach(marker=>{
+        const show = filter==='all'||(filter==='with' && marker.itemData.hasSite)||(filter==='without' && !marker.itemData.hasSite);
+        show?mapInteractive.addLayer(marker):mapInteractive.removeLayer(marker);
+    });
 }
-window.onload = initMap;
-</script>
 
+function switchMap(type,e){
+    document.querySelectorAll('.map-btn').forEach(btn=>btn.classList.remove('active'));
+    e.target.classList.add('active');
+    if(type==='interactive'){
+        document.getElementById('map-interactive').classList.add('active');
+        document.getElementById('map-heatmap').classList.remove('active');
+        document.getElementById('heatmap-legend').style.display='none';
+        setTimeout(()=>mapInteractive.invalidateSize(),100);
+    } else {
+        document.getElementById('map-interactive').classList.remove('active');
+        document.getElementById('map-heatmap').classList.add('active');
+        document.getElementById('heatmap-legend').style.display='block';
+        setTimeout(()=>mapHeatmap.invalidateSize(),100);
+    }
+}
+
+window.onload = initMaps;
+</script>
 </body>
 </html>

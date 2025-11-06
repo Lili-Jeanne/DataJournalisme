@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .buttons button {
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .buttons button:hover {
+            opacity: 0.8;
+        }
+
+        .auto-entrepreneur {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .salarie {
+            background-color: #FF9800;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenue sur notre site</h1>
+    </header>
+
+    <article>
+        <h2>Découvrez vos possibilités professionnelles</h2>
+        <p>Vous souhaitez évoluer dans votre carrière ? Que vous vouliez devenir auto-entrepreneur ou continuer en tant que salarié, nous vous proposons les informations et les outils nécessaires pour prendre la meilleure décision pour votre avenir professionnel.</p>
+    </article>
+
+    <div class="buttons">
+        <button class="auto-entrepreneur" onclick="window.location.href='#auto-entrepreneur'">Je veux devenir auto-entrepreneur</button>
+        <button class="salarie" onclick="window.location.href='#salarie'">Je veux être salarié</button>
+    </div>
+
+</body>
+</html>

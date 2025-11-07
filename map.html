@@ -217,7 +217,6 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 </style>
 </head>
 <body>
-
 <!-- Choix du département -->
 <div id="department-choice" style="
     position: fixed; top:0; left:0; width:100%; height:100%; 
@@ -327,19 +326,22 @@ function setupMobileMenuClose() {
     }
 }
 
-// Lancement après choix département
-function startMap(department) {
+async function startMap(department) {
     selectedDept = department;
     document.getElementById('department-choice').style.display = 'none';
-    initMaps();
+    await initMaps();
+
+    if (selectedDept === 'dordogne') {
+        localiserAgences();
+    }
 }
 
 async function initMaps() {
-    let csvFile = 'data_geocoded.csv'; // Dordogne par défaut
+    let csvFile = 'data_geocoded.csv';
     let center = [45.1847, 0.7213];
     if(selectedDept === 'gironde') {
         csvFile = 'data_geocoded_33.csv';
-        center = [44.8378, -0.5792]; // Bordeaux approximatif
+        center = [44.8378, -0.5792];
     }
 
     mapInteractive = L.map('map-interactive').setView(center, 10);
@@ -394,23 +396,6 @@ async function processData(csvText){
         if(i % 50 === 0) await new Promise(r=>setTimeout(r,1));
     }
 
-    const heatmapData = allData.filter(d=>!d.hasSite).map(d=>[d.lat,d.lon,0.8]);
-    heatmapLayer = L.heatLayer(heatmapData, { 
-        radius: getDynamicRadius(mapHeatmap.getZoom()), 
-        blur: 20, 
-        maxZoom: 18,
-        max: 1.0,
-        gradient: {
-            0.0: '#0000ff',
-            0.2: '#00ffff', 
-            0.4: '#00ff00',
-            0.6: '#ffff00',
-            0.8: '#ff8000',
-            1.0: '#ff0000'
-        }
-    }).addTo(mapHeatmap);
-    mapHeatmap.on('zoomend', ()=>heatmapLayer.setOptions({ radius:getDynamicRadius(mapHeatmap.getZoom()) }));
-
     document.getElementById('loading').style.display='none';
     setupMobileMenuClose();
 }
@@ -447,6 +432,7 @@ function filterMarkers(filter,e){
 function switchMap(type,e){
     document.querySelectorAll('.map-btn').forEach(btn=>btn.classList.remove('active'));
     e.target.classList.add('active');
+
     if(type==='interactive'){
         document.getElementById('map-interactive').classList.add('active');
         document.getElementById('map-heatmap').classList.remove('active');
@@ -456,10 +442,62 @@ function switchMap(type,e){
         document.getElementById('map-interactive').classList.remove('active');
         document.getElementById('map-heatmap').classList.add('active');
         document.getElementById('heatmap-legend').style.display='block';
-        setTimeout(()=>mapHeatmap.invalidateSize(),100);
+        setTimeout(()=>{
+            mapHeatmap.invalidateSize();
+            if(!heatmapLayer){
+                const heatmapData = allData.filter(d=>!d.hasSite).map(d=>[d.lat,d.lon,0.8]);
+                heatmapLayer = L.heatLayer(heatmapData, { 
+                    radius: getDynamicRadius(mapHeatmap.getZoom()), 
+                    blur: 20, 
+                    maxZoom: 18,
+                    max: 1.0,
+                    gradient: {
+                        0.0: '#0000ff',
+                        0.2: '#00ffff', 
+                        0.4: '#00ff00',
+                        0.6: '#ffff00',
+                        0.8: '#ff8000',
+                        1.0: '#ff0000'
+                    }
+                }).addTo(mapHeatmap);
+                mapHeatmap.on('zoomend', ()=>heatmapLayer.setOptions({ radius:getDynamicRadius(mapHeatmap.getZoom()) }));
+            }
+        },100);
     }
-    
+
     if (window.innerWidth <= 768) document.getElementById('sidebar').classList.remove('open');
+}
+
+// Localiser les agences
+async function localiserAgences() {
+    try {
+        const response = await fetch('agence_loc.csv');
+        if (!response.ok) throw new Error('agence_loc.csv introuvable');
+        const text = await response.text();
+        const lines = text.trim().split('\n');
+
+        for (let i = 1; i < lines.length; i++) {
+            const vals = lines[i].split(',');
+            if (vals.length >= 3) {
+                const nom = vals[0];
+                const lat = parseFloat(vals[1]);
+                const lon = parseFloat(vals[2]);
+                if (!isNaN(lat) && !isNaN(lon)) {
+                    const iconAgence = L.divIcon({
+                        html: `<div style="background:#3b82f6;width:16px;height:16px;border-radius:50%;border:2px solid white;"></div>`,
+                        iconSize: [16, 16],
+                        iconAnchor: [8, 8],
+                        className: ''
+                    });
+                    const marker = L.marker([lat, lon], { icon: iconAgence }).addTo(mapInteractive);
+                    marker.bindPopup(`<b>🏢 ${nom}</b>`);
+                }
+            }
+        }
+        console.log('Agences chargées depuis agence_loc.csv');
+    } catch (err) {
+        console.error('Erreur lors du chargement des agences :', err);
+    }
 }
 </script>
 </body>

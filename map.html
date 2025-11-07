@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cartes des Coiffeurs en Dordogne</title>
+<title>Cartes des Coiffeurs en Dordogne ou Gironde</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
@@ -18,7 +18,6 @@ body {
     color: #4b2e27;
 }
 .container { display: flex; height: 100vh; }
-
 /* === SIDEBAR === */
 .sidebar { 
     width: 320px; 
@@ -32,7 +31,6 @@ body {
 }
 h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 .subtitle { font-size: 13px; opacity: 0.9; margin-bottom: 20px; }
-
 /* === MENU MOBILE === */
 .menu-toggle {
     display: none;
@@ -57,7 +55,6 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
     height: 24px;
     display: block;
 }
-
 /* === STATS BOX === */
 .stats { 
     background: rgba(246,221,180,0.15);
@@ -68,7 +65,6 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 }
 .stat-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px; }
 .stat-value { font-weight: bold; font-size: 16px; }
-
 /* === MAP SELECTOR === */
 .map-selector { 
     background: rgba(246,221,180,0.15);
@@ -78,7 +74,6 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
     margin-bottom: 20px;
 }
 .map-selector h3 { font-size: 15px; margin-bottom: 12px; }
-
 .map-btn {
     width: 100%; padding: 10px; margin-bottom: 8px;
     border: 2px solid rgba(246,221,180,0.3);
@@ -90,7 +85,6 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 }
 .map-btn:hover { background: rgba(246,221,180,0.25); transform: translateY(-2px); }
 .map-btn.active { background: #F6DDB4; color: #A22D27; border-color: #F6DDB4; }
-
 /* === FILTERS === */
 .filters { margin-bottom: 20px; }
 .filter-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; color: #F6DDB4; }
@@ -105,7 +99,6 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 }
 .filter-btn:hover { background: rgba(246,221,180,0.25); transform: translateY(-2px); }
 .filter-btn.active { background: #F6DDB4; color: #A22D27; border-color: #F6DDB4; }
-
 /* === LEGEND === */
 .legend { 
     background: rgba(246,221,180,0.15);
@@ -118,7 +111,6 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 .legend-color { width: 18px; height: 18px; border-radius: 50%; margin-right: 10px; border: 2px solid #F6DDB4; }
 .with-site { background: #A6BE4C; }
 .without-site { background: #A22D27; }
-
 /* === HEATMAP LEGEND === */
 .heatmap-legend { 
     background: rgba(246,221,180,0.15);
@@ -130,12 +122,10 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 }
 .heatmap-gradient { height: 20px; border-radius: 4px; margin-top: 10px; background: linear-gradient(to right, #0000ff, #00ffff, #00ff00, #ffff00, #ff8000, #ff0000); }
 .heatmap-labels { display: flex; justify-content: space-between; font-size: 11px; margin-top: 5px; color:#F6DDB4; }
-
 /* === MAPS === */
 .maps-container { flex: 1; display: flex; flex-direction: column; }
 #map-interactive, #map-heatmap { height: 100%; display: none; }
 #map-interactive.active, #map-heatmap.active { display: block; }
-
 /* === POPUPS === */
 .popup-content { min-width: 200px; }
 .popup-address { font-weight: 600; margin-bottom: 8px; color: #A22D27; font-size: 13px; }
@@ -145,7 +135,6 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 .popup-site.no-site { color: #A22D27; }
 .popup-link { color: #C2374C; text-decoration: none; font-size: 11px; display: block; margin-top: 6px; }
 .popup-link:hover { text-decoration: underline; }
-
 /* === LOADING === */
 .loading { 
     position: absolute; top: 50%; left: 50%; 
@@ -166,7 +155,6 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 }
 #loading-counter { font-weight: bold; font-size: 16px; margin-top: 8px; }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-
 /* === BOUTON EXPLORE === */
 .explore-btn {
     position: fixed;
@@ -198,7 +186,6 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 .explore-btn:hover svg {
     transform: rotate(90deg);
 }
-
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
     .sidebar {
@@ -223,19 +210,34 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
         padding: 10px 18px;
         font-size: 14px;
     }
-    h1 {
-        font-size: 20px;
-    }
-    .stats {
-        padding: 12px;
-    }
-    .stat-item {
-        font-size: 13px;
-    }
+    h1 { font-size: 20px; }
+    .stats { padding: 12px; }
+    .stat-item { font-size: 13px; }
 }
 </style>
 </head>
 <body>
+
+<!-- Choix du département -->
+<div id="department-choice" style="
+    position: fixed; top:0; left:0; width:100%; height:100%; 
+    background: rgba(0,0,0,0.6); display:flex; justify-content:center; align-items:center; 
+    z-index:10000; color:#fff; flex-direction:column;
+">
+    <div style="
+        background:#A22D27; padding:30px; border-radius:15px; text-align:center;
+        max-width:300px;
+    ">
+        <h2>Choisissez le département</h2>
+        <p>Quelle région voulez-vous consulter ?</p>
+        <button onclick="startMap('dordogne')" style="
+            background:#F6DDB4; color:#A22D27; border:none; padding:10px 20px; margin:10px; border-radius:8px; cursor:pointer;
+        ">Dordogne</button>
+        <button onclick="startMap('gironde')" style="
+            background:#F6DDB4; color:#A22D27; border:none; padding:10px 20px; margin:10px; border-radius:8px; cursor:pointer;
+        ">Gironde</button>
+    </div>
+</div>
 
 <!-- Bouton menu mobile -->
 <button class="menu-toggle" onclick="toggleMenu()">
@@ -248,9 +250,8 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 
 <div class="container">
     <div class="sidebar" id="sidebar">
-        <h1>💇‍♀️ Coiffeurs en Dordogne</h1>
+        <h1>💇‍♀️ Coiffeurs</h1>
         <p class="subtitle">Analyse de présence en ligne</p>
-
         <div class="stats">
             <div class="stat-item"><span>Total:</span><span class="stat-value" id="total-count">0</span></div>
             <div class="stat-item"><span>Avec site web:</span><span class="stat-value" id="with-site-count" style="color:#A6BE4C">0</span></div>
@@ -311,14 +312,13 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 </div>
 
 <script>
-let mapInteractive, mapHeatmap, markers = [], heatmapLayer, allData = [], currentFilter = 'all';
+let mapInteractive, mapHeatmap, markers = [], heatmapLayer, allData = [], currentFilter = 'all', selectedDept = 'dordogne';
 
 function toggleMenu() {
     const sidebar = document.getElementById('sidebar');
     sidebar.classList.toggle('open');
 }
 
-// Fermer le menu quand on clique sur la carte (mobile uniquement)
 function setupMobileMenuClose() {
     if (window.innerWidth <= 768) {
         document.querySelector('.maps-container').addEventListener('click', () => {
@@ -327,21 +327,36 @@ function setupMobileMenuClose() {
     }
 }
 
+// Lancement après choix département
+function startMap(department) {
+    selectedDept = department;
+    document.getElementById('department-choice').style.display = 'none';
+    initMaps();
+}
+
 async function initMaps() {
-    mapInteractive = L.map('map-interactive').setView([45.1847, 0.7213], 10);
+    let csvFile = 'data_geocoded.csv'; // Dordogne par défaut
+    let center = [45.1847, 0.7213];
+    if(selectedDept === 'gironde') {
+        csvFile = 'data_geocoded_33.csv';
+        center = [44.8378, -0.5792]; // Bordeaux approximatif
+    }
+
+    mapInteractive = L.map('map-interactive').setView(center, 10);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors', maxZoom: 19 }).addTo(mapInteractive);
 
-    mapHeatmap = L.map('map-heatmap').setView([45.1847, 0.7213], 10);
+    mapHeatmap = L.map('map-heatmap').setView(center, 10);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap contributors', maxZoom: 19 }).addTo(mapHeatmap);
 
     try {
-        const response = await fetch('data_geocoded.csv');
-        if (!response.ok) throw new Error('data_geocoded.csv introuvable');
+        const response = await fetch(csvFile);
+        if (!response.ok) throw new Error(csvFile + ' introuvable');
         const csvText = await response.text();
         await processData(csvText);
     } catch(e) {
         console.error(e);
         document.getElementById('loading').style.display = 'none';
+        alert('Erreur lors du chargement des données : ' + e.message);
     }
 }
 
@@ -370,7 +385,6 @@ async function processData(csvText){
 
                 if(hasSite) withSite++; else withoutSite++;
 
-                // mise à jour des compteurs en temps réel
                 totalElem.textContent = allData.length;
                 withElem.textContent = withSite;
                 withoutElem.textContent = withoutSite;
@@ -427,10 +441,7 @@ function filterMarkers(filter,e){
         show?mapInteractive.addLayer(marker):mapInteractive.removeLayer(marker);
     });
     
-    // Fermer le menu sur mobile après sélection
-    if (window.innerWidth <= 768) {
-        document.getElementById('sidebar').classList.remove('open');
-    }
+    if (window.innerWidth <= 768) document.getElementById('sidebar').classList.remove('open');
 }
 
 function switchMap(type,e){
@@ -448,13 +459,8 @@ function switchMap(type,e){
         setTimeout(()=>mapHeatmap.invalidateSize(),100);
     }
     
-    // Fermer le menu sur mobile après sélection
-    if (window.innerWidth <= 768) {
-        document.getElementById('sidebar').classList.remove('open');
-    }
+    if (window.innerWidth <= 768) document.getElementById('sidebar').classList.remove('open');
 }
-
-window.onload = initMaps;
 </script>
 </body>
 </html>

@@ -335,6 +335,7 @@ siren,url_pappers,site_web,adress,lat,lon
 490764206.0,https://www.pappers.fr/recherche?q=490764206,Non renseigné,62 AVENUE JEAN JAURES 24750 TRELISSAC,45.205271,0.786315
 490880671.0,https://www.pappers.fr/recherche?q=490880671,Non renseigné,670 ROUTE DE LA POULARIE 24290 VALOJOULX,45.0203065,1.1425682
 491116646.0,https://www.pappers.fr/recherche?q=491116646,Non renseigné,3 PL ANDRE MARCHAPS 24340 MAREUIL EN PERIGORD,45.4500934,0.4508551
+491196812.0,https://www.pappers.fr/recherche?q=491196812,Non renseigné,LE BOURG 24530 VILLARS,45.9502512,0.7841647
 491255402.0,https://www.pappers.fr/recherche?q=491255402,Non renseigné,18 RUE GAMBETTA 24220 SAINT-CYPRIEN,44.8691863,1.0426817
 491509840.0,https://www.pappers.fr/recherche?q=491509840,Non renseigné,179 RUE COMBE DES DAMES 24750 CHAMPCEVINEL,45.197239,0.72474
 491784567.0,https://www.pappers.fr/recherche?q=491784567,Non renseigné,LD LE COLOMBIER 24210 SAINT-RABIER,45.154376,1.156866
@@ -806,6 +807,7 @@ siren,url_pappers,site_web,adress,lat,lon
 939316931.0,https://www.pappers.fr/recherche?q=939316931,Non renseigné,30 ALLEE DE LA GARENNE 24130 LE FLEIX,44.8755075,0.2463554
 939478384.0,https://www.pappers.fr/recherche?q=939478384,Non renseigné,BRANTOME EN PERIGORD,45.3756582,0.6177648
 939874053.0,https://www.pappers.fr/recherche?q=939874053,Non renseigné,BERGERAC,44.8534568,0.487531
+941174013.0,https://www.pappers.fr/recherche?q=941174013,https://heracoiffure.fr/,SANILHAC,44.5362646,4.2497559
 941347577.0,https://www.pappers.fr/recherche?q=941347577,Non renseigné,14 RUE GAMBETTA 24000 PERIGUEUX,45.1879268,0.7102845
 941558454.0,https://www.pappers.fr/recherche?q=941558454,Non renseigné,6 RUE LE BRET 24100 BERGERAC,44.8543839,0.4928436
 941978199.0,https://www.pappers.fr/recherche?q=941978199,Non renseigné,ROUFFIGNAC-SAINT-CERNIN-DE-REILHAC,45.0473838,0.9788088
@@ -1050,6 +1052,7 @@ siren,url_pappers,site_web,adress,lat,lon
 794395673.0,https://www.pappers.fr/recherche?q=794395673,Non renseigné,LACAUJAMMET 24360 SAINT-ESTEPHE,45.601487,0.662503
 794689794.0,https://www.pappers.fr/recherche?q=794689794,Non renseigné,LES PERICOUX 49 RUE D'AUBAS 24570 CONDAT-SUR-VEZERE,45.100758,1.223048
 794703462.0,https://www.pappers.fr/recherche?q=794703462,Non renseigné,5 CHEMIN DE LA CALE 24260 LES EYZIES,44.9421412,1.0057184
+,,,,,
 797470929.0,https://www.pappers.fr/recherche?q=797470929,Non renseigné,24 RUE GAMBETTA 24310 BRANTOME EN PERIGORD,45.3636694,0.649625
 797523511.0,https://www.pappers.fr/recherche?q=797523511,Non renseigné,SAINTE ALVERE 1 RUE CATROUX 24380 VAL DE LOUYRE ET CAUDEAU,44.945654,0.808985
 798253308.0,https://www.pappers.fr/recherche?q=798253308,Non renseigné,158 RTE DE LYON 24330 BOULAZAC ISLE MANOIRE,45.1790447,0.7427727
@@ -1161,6 +1164,7 @@ siren,url_pappers,site_web,adress,lat,lon
 845362383.0,https://www.pappers.fr/recherche?q=845362383,Non renseigné,BOULAZAC 40 AV MARCEL PAUL 24330 BOULAZAC ISLE MANOIRE,45.183525,0.775197
 847930054.0,https://www.pappers.fr/recherche?q=847930054,Non renseigné,980 RUE HENRI DE NAVARRE 24130 LE FLEIX,44.8737481,0.2478247
 848550638.0,https://www.pappers.fr/recherche?q=848550638,Non renseigné,4 RUE DE LA BRECHE 24170 PAYS DE BELVES,44.7764915,1.0079165
+849444179.0,https://www.pappers.fr/recherche?q=849444179,Non renseigné,LA GALIE 24330 LA DOUZE,42.98284,0.635307
 849444708.0,https://www.pappers.fr/recherche?q=849444708,Non renseigné,LA JAUNIE 24350 MENSIGNAC,45.214781,0.55597
 849495940.0,https://www.pappers.fr/recherche?q=849495940,Non renseigné,4 CHEMIN DE LA GARDE 24220 SAINT-CYPRIEN,44.872105,1.042498
 849543939.0,https://www.pappers.fr/recherche?q=849543939,Non renseigné,LESPINASSE 24150 PRESSIGNAC-VICQ,44.8911058,0.7111552
@@ -1645,6 +1649,7 @@ siren,url_pappers,site_web,adress,lat,lon
 316950740.0,https://www.pappers.fr/recherche?q=316950740,https://augredubienetre.fr/,AV RACAUD 24530 CHAMPAGNAC-DE-BELAIR,45.397455,0.695599
 321997694.0,https://www.pappers.fr/recherche?q=321997694,Non renseigné,IMPASSE JEAN ZAY 24660 COULOUNIEIX-CHAMIERS,45.184896,0.684887
 322239070.0,https://www.pappers.fr/recherche?q=322239070,Non renseigné,607 CHEMIN DE COURSERAND 24580 FLEURAC,45.007759,1.043728
+326907037.0,https://www.pappers.fr/recherche?q=326907037,Non renseigné,LES FARGES,45.90651,1.551616
 341699999.0,https://www.pappers.fr/recherche?q=341699999,Non renseigné,11 LE REPAIRE 24260 LES EYZIES,44.933665,1.047179
 341980597.0,https://www.pappers.fr/recherche?q=341980597,Non renseigné,PERIGUEUX,45.193072,0.711299
 377834288.0,https://www.pappers.fr/recherche?q=377834288,Non renseigné,22 RUE DU PLATEAU DES IZARDS 24660 COULOUNIEIX-CHAMIERS,45.187587,0.697394
@@ -1709,6 +1714,7 @@ siren,url_pappers,site_web,adress,lat,lon
 524134582.0,https://www.pappers.fr/recherche?q=524134582,https://massage-perigueux.com/,68 RUE SERGENT BONNELIE 24000 PERIGUEUX,45.181988,0.727679
 524648664.0,https://www.pappers.fr/recherche?q=524648664,Non renseigné,660 ROUTE DE LA GRANGE NORD 24200 CARSAC-AILLAC,44.845587,1.281606
 524655495.0,https://www.pappers.fr/recherche?q=524655495,Non renseigné,CAVILLAC 24750 TRELISSAC,45.203246,0.782832
+528222995.0,https://www.pappers.fr/recherche?q=528222995,Non renseigné,MOLIERES,43.850992,2.868454
 528936917.0,https://www.pappers.fr/recherche?q=528936917,Non renseigné,LIEU DIT LA BESSE 24310 BRANTOME EN PERIGORD,45.317976,0.66752
 529412108.0,https://www.pappers.fr/recherche?q=529412108,Non renseigné,382 RUE DES CLEMATITES 24420 SORGES-ET-LIGUEUX-EN-PERIGORD,45.306304,0.854542
 529414112.0,https://www.pappers.fr/recherche?q=529414112,Non renseigné,16 RES VIGNERAS 24200 SARLAT-LA-CANEDA,44.872889,1.205681
@@ -1750,6 +1756,7 @@ siren,url_pappers,site_web,adress,lat,lon
 791712854.0,https://www.pappers.fr/recherche?q=791712854,Non renseigné,42 RUE DE LA LIBERATION 24400 MUSSIDAN,45.037147,0.367305
 791918469.0,https://www.pappers.fr/recherche?q=791918469,Non renseigné,LA LAMBERTIE 24350 MENSIGNAC,45.195845,0.581444
 791984131.0,https://www.pappers.fr/recherche?q=791984131,https://aucoeurdesmains.e-monsite.com/,CONDAT-SUR-TRINCOU,45.366064,0.722254
+792123481.0,https://www.pappers.fr/recherche?q=792123481,Non renseigné,JOURNIAC,45.317842,2.654162
 792850950.0,https://www.pappers.fr/recherche?q=792850950,Non renseigné,10 PLACE DU MARCHE 24270 PAYZAC,45.400858,1.218709
 793488909.0,https://www.pappers.fr/recherche?q=793488909,Non renseigné,20 AVENUE DE LA LIBERATION 24260 LE BUGUE,44.916071,0.926153
 793610098.0,https://www.pappers.fr/recherche?q=793610098,Non renseigné,RUE JEAN MOULIN 24110 SAINT-ASTIER,45.150372,0.522342
@@ -1767,6 +1774,7 @@ siren,url_pappers,site_web,adress,lat,lon
 808236343.0,https://www.pappers.fr/recherche?q=808236343,Non renseigné,MAIRIE  BOURG 24580 PLAZAC,45.035477,1.04043
 808302624.0,https://www.pappers.fr/recherche?q=808302624,Non renseigné,LA DOUZE,45.066405,0.86466
 811392422.0,https://www.pappers.fr/recherche?q=811392422,Non renseigné,BERGERAC,44.85304,0.482291
+811984087.0,https://www.pappers.fr/recherche?q=811984087,https://therapeute.shop/,BOISSE,46.915386,-1.266009
 812172088.0,https://www.pappers.fr/recherche?q=812172088,Non renseigné,52 ROUTE DU PUY DE L'ARCHE 24650 CHANCELADE,45.210452,0.680149
 813112208.0,https://www.pappers.fr/recherche?q=813112208,Non renseigné,41 ROUTE DU RIMBET 24130 SAINT-PIERRE-D'EYRAUD,44.854323,0.305535
 813686987.0,https://www.pappers.fr/recherche?q=813686987,Non renseigné,LD LE ROC 24290 SAINT-LEON-SUR-VEZERE,44.994183,1.069196
@@ -1892,6 +1900,7 @@ siren,url_pappers,site_web,adress,lat,lon
 924279383.0,https://www.pappers.fr/recherche?q=924279383,Non renseigné,LIEU DIT LA RENONCIE 24560 BOUNIAGUES,44.762908,0.526538
 927684563.0,https://www.pappers.fr/recherche?q=927684563,https://icimainstenant.com/,SAINT JORY LASBLOUX,45.338567,0.947661
 927826149.0,https://www.pappers.fr/recherche?q=927826149,Non renseigné,APPT 207 7 PLACE FAIDHERBE 24000 PERIGUEUX,45.183401,0.726019
+928896844.0,https://www.pappers.fr/recherche?q=928896844,Non renseigné,ISSAC,45.579946,-0.119134
 930040894.0,https://www.pappers.fr/recherche?q=930040894,https://lharmonieduson.com/,1925 ROUTE DU CAMBORD 24200 SARLAT-LA-CANEDA,44.874535,1.257236
 930452982.0,https://www.pappers.fr/recherche?q=930452982,Non renseigné,4 IMPASSE DES BERNARDOUX 24430 MARSAC-SUR-L'ISLE,45.183681,0.653345
 930590401.0,https://www.pappers.fr/recherche?q=930590401,Non renseigné,LIEU DIT LA DURANTIE 2981 ROUTE DE L'ECHANLEUIL 24340 SAINTE-CROIX-DE-MAREUIL,45.443062,0.406431
@@ -1960,6 +1969,7 @@ siren,url_pappers,site_web,adress,lat,lon
 988603445.0,https://www.pappers.fr/recherche?q=988603445,Non renseigné,MOULEYDIER,44.854095,0.607247
 989153754.0,https://www.pappers.fr/recherche?q=989153754,https://massagedetenteawa.com/,ROUTE DE FONTANAUD 24310 BIRAS,45.297612,0.665526
 989242870.0,https://www.pappers.fr/recherche?q=989242870,Non renseigné,SAINT-CHAMASSY,44.874694,0.934629
+989609482.0,https://www.pappers.fr/recherche?q=989609482,Non renseigné,GRIGNOLS,44.415315,-0.027157
 990000465.0,https://www.pappers.fr/recherche?q=990000465,Non renseigné,8 RUE EMILE ZOLA 24210 THENON,45.14034,1.06908
 990391450.0,https://www.pappers.fr/recherche?q=990391450,Non renseigné,MONTPON-MENESTEROL,45.013803,0.150607
 991248360.0,https://www.pappers.fr/recherche?q=991248360,https://andranne.fr/,SAINT-MESMIN,46.801981,-0.74668
@@ -2009,6 +2019,7 @@ siren,url_pappers,site_web,adress,lat,lon
 377668744.0,https://www.pappers.fr/recherche?q=377668744,Non renseigné,EN CHAMENON 24290 SAINT-LEON-SUR-VEZERE,45.014744,1.081766
 377932413.0,https://www.pappers.fr/recherche?q=377932413,Non renseigné,MAUZAC-ET-GRAND-CASTANG,44.874192,0.776109
 378643704.0,https://www.pappers.fr/recherche?q=378643704,Non renseigné,LE MAS 24200 SARLAT-LA-CANEDA,44.90572,1.20182
+379466089.0,https://www.pappers.fr/recherche?q=379466089,Non renseigné,MAZEYROLLES,44.92665,1.743485
 379880123.0,https://www.pappers.fr/recherche?q=379880123,Non renseigné,1197 RTE DE NOTRE DAME DES VERTUS 24380 SANILHAC,45.12022,0.706059
 380813832.0,https://www.pappers.fr/recherche?q=380813832,Non renseigné,97 CHEMIN DU GROS FRENE 24210 BROUCHAUD,45.198234,1.007835
 380856708.0,https://www.pappers.fr/recherche?q=380856708,Non renseigné,FOSSEMAGNE,45.026463,1.0371
@@ -2039,6 +2050,7 @@ siren,url_pappers,site_web,adress,lat,lon
 394892145.0,https://www.pappers.fr/recherche?q=394892145,Non renseigné,SAINT-GERMAIN-DU-SALEMBRE,45.123825,0.450383
 395330996.0,https://www.pappers.fr/recherche?q=395330996,Non renseigné,1675 CHEMIN DE LA REINE 24400 BEAURONNE,45.094386,0.38077
 397747379.0,https://www.pappers.fr/recherche?q=397747379,Non renseigné,JEANBUVANT 24110 MANZAC-SUR-VERN,45.08312,0.588947
+399093665.0,https://www.pappers.fr/recherche?q=399093665,https://caterina-caron-psychologue.fr/,LA COQUILLE,46.9914,1.188013
 399742022.0,https://www.pappers.fr/recherche?q=399742022,Non renseigné,CHAPETIT 24640 STE-EULALIE D ANS,45.253157,1.021757
 399935584.0,https://www.pappers.fr/recherche?q=399935584,Non renseigné,75 IMPASSE DU GRAND MOULIN 24140 CLERMONT-DE-BEAUREGARD,44.950161,0.639629
 399998566.0,https://www.pappers.fr/recherche?q=399998566,Non renseigné,PAYS DE BELVES,44.759057,1.013432
@@ -2090,6 +2102,7 @@ siren,url_pappers,site_web,adress,lat,lon
 424235117.0,https://www.pappers.fr/recherche?q=424235117,Non renseigné,SIORAC-EN-PERIGORD,44.816779,0.982806
 424266740.0,https://www.pappers.fr/recherche?q=424266740,Non renseigné,SAINT-MAYME-DE-PEREYROL,45.015669,0.651237
 424525533.0,https://www.pappers.fr/recherche?q=424525533,Non renseigné,LES GRANGES 82 ROUTE DE LA GOULEME 24200 CARSAC-AILLAC,44.837607,1.289489
+424696276.0,https://www.pappers.fr/recherche?q=424696276,Non renseigné,LISLE,46.12233,1.653032
 424769677.0,https://www.pappers.fr/recherche?q=424769677,Non renseigné,HAUTEFORT,45.260626,1.125634
 425145448.0,https://www.pappers.fr/recherche?q=425145448,Non renseigné,24230 SAINT-ANTOINE-DE-BREUILH,44.845894,0.145348
 425191830.0,https://www.pappers.fr/recherche?q=425191830,Non renseigné,PRESBYTERE  24440 BEAUMONTOIS EN PERIGORD,44.692992,0.752185
@@ -2140,6 +2153,7 @@ siren,url_pappers,site_web,adress,lat,lon
 441762663.0,https://www.pappers.fr/recherche?q=441762663,Non renseigné,SARLAT-LA-CANEDA,44.90572,1.20182
 442116984.0,https://www.pappers.fr/recherche?q=442116984,Non renseigné,15 RUE GABRIEL TARDE 24200 SARLAT-LA-CANEDA,44.881622,1.215818
 442489993.0,https://www.pappers.fr/recherche?q=442489993,Non renseigné,32 AVENUE D'AQUITAINE 24480 LE BUISSON-DE-CADOUIN,44.846669,0.906521
+442671459.0,https://www.pappers.fr/recherche?q=442671459,Non renseigné,MONTAGRIER,46.179935,0.956236
 442716452.0,https://www.pappers.fr/recherche?q=442716452,Non renseigné,LIEU-DIT BON 24550 MAZEYROLLES,44.658348,1.006254
 442886628.0,https://www.pappers.fr/recherche?q=442886628,Non renseigné,12 IMPASSE DU LAC BLANC 24750 BOULAZAC ISLE MANOIRE,45.153176,0.729721
 443246020.0,https://www.pappers.fr/recherche?q=443246020,Non renseigné,RUE DU DOCTEUR ROUSSEAU 24410 SAINT AULAYE-PUYMANGOU,45.201706,0.130825
@@ -2236,6 +2250,7 @@ siren,url_pappers,site_web,adress,lat,lon
 492617162.0,https://www.pappers.fr/recherche?q=492617162,Non renseigné,LD MACHEFER 24460 NEGRONDES,45.340303,0.872594
 492654801.0,https://www.pappers.fr/recherche?q=492654801,Non renseigné,761 ROUTE DE COSSET 24140 QUEYSSAC,44.910306,0.544644
 492723556.0,https://www.pappers.fr/recherche?q=492723556,https://cabanegraphique.com/,253 ROUTE DE GAGEAC 24680 GARDONNE,44.831898,0.335366
+492738133.0,https://www.pappers.fr/recherche?q=492738133,https://gayatri.fr/,SAINT-MESMIN,46.801981,-0.74668
 493830715.0,https://www.pappers.fr/recherche?q=493830715,https://douladysmension.com/,SAINT-PIERRE-D'EYRAUD,44.875018,0.323
 494176019.0,https://www.pappers.fr/recherche?q=494176019,Non renseigné,RUE DES MARTYRS 24210 LA BACHELLERIE,45.145614,1.152307
 494349863.0,https://www.pappers.fr/recherche?q=494349863,Non renseigné,PERIGUEUX,45.193072,0.711299
@@ -2455,6 +2470,7 @@ siren,url_pappers,site_web,adress,lat,lon
 539227140.0,https://www.pappers.fr/recherche?q=539227140,Non renseigné,RTE DE CHANTE LOUETTE 24100 CREYSSE,44.867085,0.545442
 539415174.0,https://www.pappers.fr/recherche?q=539415174,Non renseigné,LE PLATEAU 24420 SARLIAC-SUR-L ISLE,45.23844,0.868552
 539493437.0,https://www.pappers.fr/recherche?q=539493437,Non renseigné,"8 RES PAUL ROBERT CHEZ MME LEMOINE 122, B AVENUE ARISTIDE BRIAND 24100 BERGERAC",44.851602,0.463361
+539582338.0,https://www.pappers.fr/recherche?q=539582338,Non renseigné,FOULEIX,45.656891,2.439092
 539672816.0,https://www.pappers.fr/recherche?q=539672816,Non renseigné,PUYJOUBERT 24310 BRANTOME EN PERIGORD,45.372246,0.662133
 539781120.0,https://www.pappers.fr/recherche?q=539781120,Non renseigné,MAIRIE 24340 MAREUIL EN PERIGORD,45.495874,0.440931
 539820381.0,https://www.pappers.fr/recherche?q=539820381,Non renseigné,25 AVENUE VICTOR HUGO 24120 TERRASSON-LAVILLEDIEU,45.129845,1.300545
@@ -2583,6 +2599,7 @@ siren,url_pappers,site_web,adress,lat,lon
 805030152.0,https://www.pappers.fr/recherche?q=805030152,Non renseigné,CHATEAU-L'EVEQUE,45.254376,0.686569
 805340197.0,https://www.pappers.fr/recherche?q=805340197,Non renseigné,2 RUE DE LA SELLE 24000 PERIGUEUX,45.182963,0.719762
 807422720.0,https://www.pappers.fr/recherche?q=807422720,Non renseigné,MERIGNAC 24300 ST-MARTIN-LE-PIN,45.55332,0.617818
+807735238.0,https://www.pappers.fr/recherche?q=807735238,Non renseigné,SAINT-CYPRIEN,42.619322,3.015165
 808135750.0,https://www.pappers.fr/recherche?q=808135750,Non renseigné,"27, B RUE DE L'ISLE 24700 MONTPON-MENESTEROL",45.010988,0.160243
 808198006.0,https://www.pappers.fr/recherche?q=808198006,Non renseigné,PAYZAC,45.422784,1.219886
 808329593.0,https://www.pappers.fr/recherche?q=808329593,Non renseigné,POMBOL 24300 ST-FRONT-LA-RIVIERE,45.465289,0.726474
@@ -2613,10 +2630,12 @@ siren,url_pappers,site_web,adress,lat,lon
 811212976.0,https://www.pappers.fr/recherche?q=811212976,Non renseigné,MARSANEIX 511 ROUTE DE NOTRE DAME DE SANILHAC 24660 SANILHAC,45.101283,0.778539
 811298835.0,https://www.pappers.fr/recherche?q=811298835,Non renseigné,770 ROUTE DE PUYCHICOUT 24380 CHALAGNAC,45.097386,0.651609
 811469121.0,https://www.pappers.fr/recherche?q=811469121,Non renseigné,175 ROUTE DE BORIE PETIT 24000 PERIGUEUX,45.205044,0.71478
+811559020.0,https://www.pappers.fr/recherche?q=811559020,Non renseigné,FLEURAC,45.351956,2.481844
 811838671.0,https://www.pappers.fr/recherche?q=811838671,https://clemence-voyance-bienetre.com/,6 RUE CAMILLE FLAMMARION 24000 PERIGUEUX,45.192633,0.720565
 812008787.0,https://www.pappers.fr/recherche?q=812008787,https://nature.fr/,BOULAZAC ISLE MANOIRE,45.138859,0.783086
 812152205.0,https://www.pappers.fr/recherche?q=812152205,https://lacabame.fr/,BOURDEILLES,45.321266,0.57193
 812174589.0,https://www.pappers.fr/recherche?q=812174589,Non renseigné,RUE LIEU DIT LAGUT 24400 LES LECHES,44.987465,0.382435
+812235810.0,https://www.pappers.fr/recherche?q=812235810,Non renseigné,SOURZAC,45.255428,2.439381
 812580769.0,https://www.pappers.fr/recherche?q=812580769,Non renseigné,ECOLE 24380 SAINT-MAYME-DE-PEREYROL,45.015669,0.651237
 812862175.0,https://www.pappers.fr/recherche?q=812862175,Non renseigné,SANILHAC,45.108619,0.74659
 812934388.0,https://www.pappers.fr/recherche?q=812934388,Non renseigné,SAINTE-ORSE,45.207764,1.070425
@@ -2712,6 +2731,7 @@ siren,url_pappers,site_web,adress,lat,lon
 831552393.0,https://www.pappers.fr/recherche?q=831552393,Non renseigné,PERIGUEUX,45.193072,0.711299
 831554217.0,https://www.pappers.fr/recherche?q=831554217,Non renseigné,LE BUGUE,44.923081,0.925261
 831587282.0,https://www.pappers.fr/recherche?q=831587282,Non renseigné,PIEGUT-PLUVIERS,45.626799,0.70185
+831648134.0,https://www.pappers.fr/recherche?q=831648134,Non renseigné,FRAISSE,45.536205,2.95833
 831731013.0,https://www.pappers.fr/recherche?q=831731013,Non renseigné,SAINT-VINCENT-DE-COSSE,44.835699,1.112221
 831892138.0,https://www.pappers.fr/recherche?q=831892138,Non renseigné,SARLAT-LA-CANEDA,44.90572,1.20182
 832021802.0,https://www.pappers.fr/recherche?q=832021802,Non renseigné,GINESTET,44.904165,0.447513
@@ -2744,17 +2764,20 @@ siren,url_pappers,site_web,adress,lat,lon
 837966811.0,https://www.pappers.fr/recherche?q=837966811,Non renseigné,PLAZAC,45.046457,1.038236
 838110369.0,https://www.pappers.fr/recherche?q=838110369,Non renseigné,LIEU DIT LA PLANTE 24260 LE BUGUE,44.905712,0.951026
 838155992.0,https://www.pappers.fr/recherche?q=838155992,Non renseigné,BERGERAC,44.85304,0.482291
+838165447.0,https://www.pappers.fr/recherche?q=838165447,Non renseigné,BUSSEROLLES,45.722875,1.032015
 838216125.0,https://www.pappers.fr/recherche?q=838216125,Non renseigné,LIEU DIT MONSAC 6 ROUTE JEAN JULLIAND 24430 COURSAC,45.143653,0.639702
 838216638.0,https://www.pappers.fr/recherche?q=838216638,Non renseigné,FANLAC,45.067233,1.093853
 838485167.0,https://www.pappers.fr/recherche?q=838485167,https://mespetitsromanciers.com/,CORGNAC SUR L'ISLE,45.373174,0.943648
 838485167.0,https://www.pappers.fr/recherche?q=838485167,https://mespetitsromanciers.com/,CORGNAC-SUR-L'ISLE,45.373174,0.943648
 838636231.0,https://www.pappers.fr/recherche?q=838636231,Non renseigné,LE RAYSSE 75 IMP DES FIGUIERS LE RAYSSE 24370 PECHS-DE-L'ESPERANCE,44.886837,1.435512
 838674570.0,https://www.pappers.fr/recherche?q=838674570,Non renseigné,CALM BEAR WELLBEING  LE BOURG 24600 PETIT-BERSAC,45.243407,0.234063
+838797223.0,https://www.pappers.fr/recherche?q=838797223,Non renseigné,LAVAUR,45.550416,2.130623
 838839603.0,https://www.pappers.fr/recherche?q=838839603,Non renseigné,276 RUE COMBE DES DAMES 24000 PERIGUEUX,45.199125,0.733106
 838842177.0,https://www.pappers.fr/recherche?q=838842177,Non renseigné,LE FLEIX,44.878386,0.26907
 838844553.0,https://www.pappers.fr/recherche?q=838844553,Non renseigné,1 IMP DU VAL 24380 SANILHAC,45.108619,0.74659
 838932846.0,https://www.pappers.fr/recherche?q=838932846,Non renseigné,LE MAS LES CATALPAS  LD MALBEC 24580 FLEURAC,45.003735,1.014754
 838959633.0,https://www.pappers.fr/recherche?q=838959633,Non renseigné,SAINT-REMY,47.029663,-1.652843
+839010246.0,https://www.pappers.fr/recherche?q=839010246,Non renseigné,NAILHAC,45.689061,0.964375
 839070083.0,https://www.pappers.fr/recherche?q=839070083,Non renseigné,LA RENAUDIE 46 ROUTE DE L'AIGA DE L'ISLE 24160 SAINT-JORY-LAS-BLOUX,45.352349,0.955409
 839221967.0,https://www.pappers.fr/recherche?q=839221967,Non renseigné,TOURTOIRAC,45.27146,1.052561
 839241734.0,https://www.pappers.fr/recherche?q=839241734,Non renseigné,TERRASSON LAVILLEDIEU,45.120657,1.304607
@@ -2814,6 +2837,7 @@ siren,url_pappers,site_web,adress,lat,lon
 847872884.0,https://www.pappers.fr/recherche?q=847872884,Non renseigné,LIEU-DIT LES GRANDES LANDES 24800 SAINT-PAUL-LA-ROCHE,45.477765,1.012969
 847928082.0,https://www.pappers.fr/recherche?q=847928082,Non renseigné,134 CHEMIN DE LA LEVADE 24250 DAGLAN,44.742443,1.193651
 847996444.0,https://www.pappers.fr/recherche?q=847996444,https://gilliane-carpaye.com/,2795 ROUTE DE ROYAN 24700 EYGURANDE-ET-GARDEDEUIL,45.069494,0.120729
+848080883.0,https://www.pappers.fr/recherche?q=848080883,Non renseigné,RIBAGNAC,45.918072,1.452014
 848080891.0,https://www.pappers.fr/recherche?q=848080891,Non renseigné,VILLEFRANCHE-DU-PERIGORD,44.627268,1.110323
 848081154.0,https://www.pappers.fr/recherche?q=848081154,Non renseigné,36 IMP GABRIEL TRIBIER 24120 LES COTEAUX PERIGOURDINS,45.088662,1.372591
 848108122.0,https://www.pappers.fr/recherche?q=848108122,https://chiromancie.fr/,LEMBRAS,44.549451,4.326802
@@ -2853,6 +2877,7 @@ siren,url_pappers,site_web,adress,lat,lon
 851855973.0,https://www.pappers.fr/recherche?q=851855973,Non renseigné,APPT 236 2 COURS SAINT GEORGES 24000 PERIGUEUX,45.180163,0.723895
 851886804.0,https://www.pappers.fr/recherche?q=851886804,Non renseigné,SAINT-FRONT-SUR-NIZONNE,45.479461,0.633488
 851904821.0,https://www.pappers.fr/recherche?q=851904821,Non renseigné,BERGERAC,44.85304,0.482291
+852012475.0,https://www.pappers.fr/recherche?q=852012475,https://acupuncteur-bergerac.fr/,SAINT-REMY,47.029663,-1.652843
 852159417.0,https://www.pappers.fr/recherche?q=852159417,Non renseigné,CENAC-ET-SAINT-JULIEN,44.790196,1.211253
 852280999.0,https://www.pappers.fr/recherche?q=852280999,Non renseigné,LE ROUSSIL 24260 JOURNIAC,44.967599,0.881667
 852637057.0,https://www.pappers.fr/recherche?q=852637057,Non renseigné,ISSIGEAC,44.727717,0.60369
@@ -2870,6 +2895,7 @@ siren,url_pappers,site_web,adress,lat,lon
 853555597.0,https://www.pappers.fr/recherche?q=853555597,Non renseigné,AUBAS,45.084864,1.200266
 853598902.0,https://www.pappers.fr/recherche?q=853598902,Non renseigné,PERIGUEUX,45.193072,0.711299
 853707172.0,https://www.pappers.fr/recherche?q=853707172,Non renseigné,14 RUE JEAN LEYDIER 24100 BERGERAC,44.84032,0.465558
+853753911.0,https://www.pappers.fr/recherche?q=853753911,Non renseigné,CELLES,46.157518,1.657153
 853774222.0,https://www.pappers.fr/recherche?q=853774222,Non renseigné,CHEMIN DES GOLFERIES BLIS ET BORN  LA PEYRADE 24330 BASSILLAC ET AUBEROCHE,45.164295,0.885411
 853906543.0,https://www.pappers.fr/recherche?q=853906543,Non renseigné,CARSAC-DE-GURSON,44.947327,0.093743
 854057916.0,https://www.pappers.fr/recherche?q=854057916,Non renseigné,TERRASSON-LAVILLEDIEU,45.120657,1.304607
@@ -2981,6 +3007,7 @@ siren,url_pappers,site_web,adress,lat,lon
 888552395.0,https://www.pappers.fr/recherche?q=888552395,Non renseigné,SAINT-PIERRE-DE-COLE,45.379144,0.809337
 888784840.0,https://www.pappers.fr/recherche?q=888784840,https://marieltce.com/,24 RUE EDOUARD MANET 24650 CHANCELADE,45.20524,0.652017
 888917119.0,https://www.pappers.fr/recherche?q=888917119,Non renseigné,MONESTIER,44.774889,0.311438
+,,,,,
 889307088.0,https://www.pappers.fr/recherche?q=889307088,Non renseigné,ST AMAND DE BELVES  CANTELAUZEL 24170 PAYS DE BELVES,44.770616,1.038969
 889398871.0,https://www.pappers.fr/recherche?q=889398871,Non renseigné,ROUFFIGNAC-ST-CERNIN-DE-REILHAC,45.049045,0.973095
 889398897.0,https://www.pappers.fr/recherche?q=889398897,Non renseigné,PERIGUEUX,45.193072,0.711299
@@ -3030,6 +3057,7 @@ siren,url_pappers,site_web,adress,lat,lon
 893984310.0,https://www.pappers.fr/recherche?q=893984310,Non renseigné,AUBAS,45.084864,1.200266
 893996090.0,https://www.pappers.fr/recherche?q=893996090,Non renseigné,COUX ET BIGAROQUE-MOUZENS,44.848307,0.969856
 894023993.0,https://www.pappers.fr/recherche?q=894023993,Non renseigné,13 RUE DE LA POMMERAIE 24100 BERGERAC,44.85514,0.501352
+894112804.0,https://www.pappers.fr/recherche?q=894112804,Non renseigné,LAVALADE,45.47637,1.521392
 894117050.0,https://www.pappers.fr/recherche?q=894117050,Non renseigné,37 RUE DES FONTAINES 24100 BERGERAC,44.851795,0.483896
 894335397.0,https://www.pappers.fr/recherche?q=894335397,Non renseigné,LA BACHELLERIE,46.262127,0.988268
 894335868.0,https://www.pappers.fr/recherche?q=894335868,Non renseigné,ARCHIGNAC,45.019452,1.290838
@@ -3312,6 +3340,7 @@ siren,url_pappers,site_web,adress,lat,lon
 921384020.0,https://www.pappers.fr/recherche?q=921384020,Non renseigné,998 RTE DE TEULET MARSANEIX 24380 SANILHAC,45.111263,0.790571
 921592077.0,https://www.pappers.fr/recherche?q=921592077,Non renseigné,RIBERAC,45.239968,0.339832
 921708509.0,https://www.pappers.fr/recherche?q=921708509,Non renseigné,7 ROUTE DE CABANS 24480 LE BUISSON-DE-CADOUIN,44.849717,0.914333
+922189469.0,https://www.pappers.fr/recherche?q=922189469,Non renseigné,THENAC,45.683513,-0.647949
 922454640.0,https://www.pappers.fr/recherche?q=922454640,Non renseigné,"72, B AV DU MAL JUIN 24000 PERIGUEUX",45.185236,0.711589
 922726385.0,https://www.pappers.fr/recherche?q=922726385,Non renseigné,MENSIGNAC,45.214781,0.55597
 922922695.0,https://www.pappers.fr/recherche?q=922922695,Non renseigné,PERIGUEUX,45.193072,0.711299
@@ -3522,6 +3551,7 @@ siren,url_pappers,site_web,adress,lat,lon
 941880908.0,https://www.pappers.fr/recherche?q=941880908,Non renseigné,MINZAC,44.962311,0.03074
 942037235.0,https://www.pappers.fr/recherche?q=942037235,Non renseigné,1323 ROUTE DU BOUSQUET 24200 SAINT-ANDRE-D'ALLAS,44.881444,1.146906
 942130741.0,https://www.pappers.fr/recherche?q=942130741,Non renseigné,11 RUE DES AGRESIENS 24350 MONTAGRIER,45.271257,0.476402
+942241373.0,https://www.pappers.fr/recherche?q=942241373,https://chuchoteusedereves.fr/,SAINT-PERDOUX,44.6798,2.05854
 942317579.0,https://www.pappers.fr/recherche?q=942317579,https://atelier-dustyle.fr/,SORGES ET LIGUEUX EN PERIGORD,45.290962,0.845219
 942321837.0,https://www.pappers.fr/recherche?q=942321837,Non renseigné,PERIGUEUX,45.193072,0.711299
 942688888.0,https://www.pappers.fr/recherche?q=942688888,Non renseigné,CHAMPCEVINEL,45.220898,0.723271
@@ -3608,6 +3638,7 @@ siren,url_pappers,site_web,adress,lat,lon
 950709717.0,https://www.pappers.fr/recherche?q=950709717,Non renseigné,45 ROUTE DES BRUJOUX 24430 COURSAC,45.113269,0.664277
 950715557.0,https://www.pappers.fr/recherche?q=950715557,Non renseigné,TRELISSAC,45.214478,0.769065
 950848895.0,https://www.pappers.fr/recherche?q=950848895,Non renseigné,CHERVEIX-CUBAS,45.289665,1.114174
+,,,,,
 951012830.0,https://www.pappers.fr/recherche?q=951012830,Non renseigné,LA BORDERIE 24260 LES EYZIES,44.910342,1.008901
 951015650.0,https://www.pappers.fr/recherche?q=951015650,Non renseigné,LA BORDERIE 24260 LES EYZIES,44.910342,1.008901
 951056985.0,https://www.pappers.fr/recherche?q=951056985,Non renseigné,11 RUE DU MAJORAL FOURNIER 24330 BOULAZAC ISLE MANOIRE,45.186016,0.771453
@@ -3674,6 +3705,7 @@ siren,url_pappers,site_web,adress,lat,lon
 978747996.0,https://www.pappers.fr/recherche?q=978747996,Non renseigné,TRELISSAC,45.214478,0.769065
 978843274.0,https://www.pappers.fr/recherche?q=978843274,Non renseigné,PERIGUEUX,45.193072,0.711299
 978912111.0,https://www.pappers.fr/recherche?q=978912111,Non renseigné,COUZE-ET-SAINT-FRONT,44.823466,0.720444
+979019908.0,https://www.pappers.fr/recherche?q=979019908,https://le-sport-chez-vous.fr/,LEMBRAS,44.549451,4.326802
 979083821.0,https://www.pappers.fr/recherche?q=979083821,Non renseigné,APPT 13 7 RUE DES FOSSES 24110 SAINT-ASTIER,45.146921,0.524194
 979155090.0,https://www.pappers.fr/recherche?q=979155090,Non renseigné,582 IMPASSE DES RANDONNEES 24800 NANTHIAT,45.402601,0.991147
 979160033.0,https://www.pappers.fr/recherche?q=979160033,Non renseigné,VAL DE LOUYRE ET CAUDEAU,44.961809,0.78462
@@ -3738,6 +3770,7 @@ siren,url_pappers,site_web,adress,lat,lon
 983831686.0,https://www.pappers.fr/recherche?q=983831686,Non renseigné,BOULAZAC ISLE MANOIRE,45.138859,0.783086
 983860941.0,https://www.pappers.fr/recherche?q=983860941,Non renseigné,8 ROUTE DE COUPE GORGE 24430 COURSAC,45.112508,0.636782
 983963455.0,https://www.pappers.fr/recherche?q=983963455,Non renseigné,LALINDE,44.859033,0.742868
+984009704.0,https://www.pappers.fr/recherche?q=984009704,Non renseigné,BARDOU,43.484661,1.549352
 984024679.0,https://www.pappers.fr/recherche?q=984024679,Non renseigné,DOISSAT,44.73292,1.083089
 984046458.0,https://www.pappers.fr/recherche?q=984046458,Non renseigné,SAINT-MEDARD-DE-MUSSIDAN,45.022566,0.330503
 984310870.0,https://www.pappers.fr/recherche?q=984310870,Non renseigné,NEUVIC,45.091063,0.475448
@@ -3745,6 +3778,7 @@ siren,url_pappers,site_web,adress,lat,lon
 984350488.0,https://www.pappers.fr/recherche?q=984350488,Non renseigné,PARCOUL-CHENAUD,45.194632,0.052988
 984357459.0,https://www.pappers.fr/recherche?q=984357459,https://stevengrandriepro.fr/,115 RUE PAUL BERT 24110 SAINT-ASTIER,45.139792,0.51878
 984398602.0,https://www.pappers.fr/recherche?q=984398602,Non renseigné,3835 AV FRANCOIS MITTERRAND 24330 BASSILLAC ET AUBEROCHE,45.188053,0.85102
+984476697.0,https://www.pappers.fr/recherche?q=984476697,Non renseigné,COUTURES,44.268046,0.108789
 984496059.0,https://www.pappers.fr/recherche?q=984496059,Non renseigné,1169 ROUTE D'ANS 24120 CHATRES,45.189367,1.203996
 984555094.0,https://www.pappers.fr/recherche?q=984555094,https://larucheconciergerie.fr/,32 ROUTE DES ABEILLES 24560 SAINT-AUBIN-DE-LANQUAIS,44.793006,0.597388
 984609305.0,https://www.pappers.fr/recherche?q=984609305,Non renseigné,22 PLACE DES ORMEAUX 24510 LIMEUIL,44.886104,0.890219
@@ -3801,6 +3835,7 @@ siren,url_pappers,site_web,adress,lat,lon
 989883145.0,https://www.pappers.fr/recherche?q=989883145,Non renseigné,4 CHEMIN DE LA RICARDIE 24520 LIORAC-SUR-LOUYRE,44.899833,0.627191
 989945274.0,https://www.pappers.fr/recherche?q=989945274,Non renseigné,137 RUE DU CHATEAU 24390 BADEFOLS-D'ANS,45.230242,1.197412
 989978341.0,https://www.pappers.fr/recherche?q=989978341,Non renseigné,LAMONZIE-SAINT-MARTIN,44.836601,0.386256
+989998448.0,https://www.pappers.fr/recherche?q=989998448,Non renseigné,VEZAC,45.275986,2.293232
 990117236.0,https://www.pappers.fr/recherche?q=990117236,Non renseigné,CARSAC-AILLAC,44.851215,1.274637
 990200222.0,https://www.pappers.fr/recherche?q=990200222,Non renseigné,23 RUE DE LA LIBERATION 24360 PIEGUT-PLUVIERS,45.622471,0.690334
 990231474.0,https://www.pappers.fr/recherche?q=990231474,Non renseigné,50 AVENUE JEAN JAURES 24110 SAINT-ASTIER,45.140877,0.524097
@@ -3823,6 +3858,7 @@ siren,url_pappers,site_web,adress,lat,lon
 991032277.0,https://www.pappers.fr/recherche?q=991032277,Non renseigné,PROISSANS,44.924127,1.244831
 991075490.0,https://www.pappers.fr/recherche?q=991075490,Non renseigné,18 ROUTE DU FEU DE LA ST JEAN 24300 ABJAT-SUR-BANDIAT,45.577814,0.751063
 991125741.0,https://www.pappers.fr/recherche?q=991125741,Non renseigné,SAINT-MEDARD-DE-MUSSIDAN,45.022566,0.330503
+991230673.0,https://www.pappers.fr/recherche?q=991230673,Non renseigné,LA BACHELLERIE,46.262127,0.988268
 991239278.0,https://www.pappers.fr/recherche?q=991239278,Non renseigné,SAINT-GERMAIN-DU-SALEMBRE,45.123825,0.450383
 991348467.0,https://www.pappers.fr/recherche?q=991348467,Non renseigné,LAMONZIE-MONTASTRUC,44.895908,0.588907
 991386566.0,https://www.pappers.fr/recherche?q=991386566,Non renseigné,LIMEUIL,44.889061,0.894671
@@ -3847,6 +3883,7 @@ siren,url_pappers,site_web,adress,lat,lon
 992636332.0,https://www.pappers.fr/recherche?q=992636332,Non renseigné,LE VERTEIL - ETAGE 2 121 AVENUE JULES FERRY 24120 TERRASSON-LAVILLEDIEU,45.131073,1.298488
 992677419.0,https://www.pappers.fr/recherche?q=992677419,Non renseigné,963 ROUTE DE LA MOTTE CASTRALE 24110 LEGUILLAC-DE-L'AUCHE,45.18796,0.544995
 992751669.0,https://www.pappers.fr/recherche?q=992751669,Non renseigné,MARQUAY,44.940796,1.131458
+992862888.0,https://www.pappers.fr/recherche?q=992862888,Non renseigné,GAUGEAC,45.031084,2.149589
 993078195.0,https://www.pappers.fr/recherche?q=993078195,Non renseigné,LD 1508 ROUTE DE LA REILLE 24290 AURIAC-DU-PERIGORD,45.121145,1.121252
 993140482.0,https://www.pappers.fr/recherche?q=993140482,Non renseigné,SAINT-PAUL-LA-ROCHE,45.482351,0.997087
 993158575.0,https://www.pappers.fr/recherche?q=993158575,Non renseigné,104 CHEMIN DE PECHBOUTHIER 24220 MEYRALS,44.90226,1.054081

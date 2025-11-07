@@ -10,46 +10,133 @@
 
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; height: 100vh; overflow: hidden; }
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    height: 100vh; 
+    overflow: hidden; 
+    background: #F6DDB4;
+    color: #4b2e27;
+}
 .container { display: flex; height: 100vh; }
-.sidebar { width: 320px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; overflow-y: auto; box-shadow: 2px 0 10px rgba(0,0,0,0.1); }
+
+/* === SIDEBAR === */
+.sidebar { 
+    width: 320px; 
+    background: linear-gradient(135deg, #A22D27 0%, #C2374C 100%);
+    color: #F6DDB4;
+    padding: 25px; 
+    overflow-y: auto; 
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
 h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 .subtitle { font-size: 13px; opacity: 0.9; margin-bottom: 20px; }
-.stats { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 10px; padding: 15px; margin-bottom: 20px; }
+
+/* === STATS BOX === */
+.stats { 
+    background: rgba(246,221,180,0.15);
+    border: 2px solid rgba(246,221,180,0.3);
+    border-radius: 10px; 
+    padding: 15px; 
+    margin-bottom: 20px;
+}
 .stat-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 14px; }
 .stat-value { font-weight: bold; font-size: 16px; }
-.map-selector { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 10px; padding: 15px; margin-bottom: 20px; }
+
+/* === MAP SELECTOR === */
+.map-selector { 
+    background: rgba(246,221,180,0.15);
+    border: 2px solid rgba(246,221,180,0.3);
+    border-radius: 10px; 
+    padding: 15px; 
+    margin-bottom: 20px;
+}
 .map-selector h3 { font-size: 15px; margin-bottom: 12px; }
-.map-btn { width: 100%; padding: 10px; margin-bottom: 8px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 500; transition: all 0.3s; }
-.map-btn:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
-.map-btn.active { background: white; color: #667eea; border-color: white; }
+
+.map-btn {
+    width: 100%; padding: 10px; margin-bottom: 8px;
+    border: 2px solid rgba(246,221,180,0.3);
+    background: rgba(246,221,180,0.1);
+    color: #F6DDB4;
+    border-radius: 8px;
+    cursor: pointer; font-size: 13px; font-weight: 500;
+    transition: all 0.3s;
+}
+.map-btn:hover { background: rgba(246,221,180,0.25); transform: translateY(-2px); }
+.map-btn.active { background: #F6DDB4; color: #A22D27; border-color: #F6DDB4; }
+
+/* === FILTERS === */
 .filters { margin-bottom: 20px; }
-.filter-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
-.filter-btn { width: 100%; padding: 10px; margin-bottom: 8px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 500; transition: all 0.3s; }
-.filter-btn:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
-.filter-btn.active { background: white; color: #667eea; border-color: white; }
-.legend { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 10px; padding: 15px; }
-.legend-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+.filter-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; color: #F6DDB4; }
+.filter-btn {
+    width: 100%; padding: 10px; margin-bottom: 8px;
+    border: 2px solid rgba(246,221,180,0.3);
+    background: rgba(246,221,180,0.1);
+    color: #F6DDB4;
+    border-radius: 8px;
+    cursor: pointer; font-size: 13px; font-weight: 500;
+    transition: all 0.3s;
+}
+.filter-btn:hover { background: rgba(246,221,180,0.25); transform: translateY(-2px); }
+.filter-btn.active { background: #F6DDB4; color: #A22D27; border-color: #F6DDB4; }
+
+/* === LEGEND === */
+.legend { 
+    background: rgba(246,221,180,0.15);
+    border: 2px solid rgba(246,221,180,0.3);
+    border-radius: 10px; 
+    padding: 15px;
+}
+.legend-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; color:#F6DDB4; }
 .legend-item { display: flex; align-items: center; margin-bottom: 10px; font-size: 13px; }
-.legend-color { width: 18px; height: 18px; border-radius: 50%; margin-right: 10px; border: 2px solid white; }
-.with-site { background: #10b981; }
-.without-site { background: #ef4444; }
-.heatmap-legend { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 10px; padding: 15px; margin-top: 15px; display:none; }
-.heatmap-gradient { height: 20px; border-radius: 4px; margin-top: 10px; background: linear-gradient(to right, #0000ff, #00ff00, #ff0000); }
-.heatmap-labels { display: flex; justify-content: space-between; font-size: 11px; margin-top: 5px; }
+.legend-color { width: 18px; height: 18px; border-radius: 50%; margin-right: 10px; border: 2px solid #F6DDB4; }
+.with-site { background: #A6BE4C; }
+.without-site { background: #A22D27; }
+
+/* === HEATMAP LEGEND === */
+.heatmap-legend { 
+    background: rgba(246,221,180,0.15);
+    border: 2px solid rgba(246,221,180,0.3);
+    border-radius: 10px; 
+    padding: 15px; 
+    margin-top: 15px; 
+    display:none; 
+}
+.heatmap-gradient { height: 20px; border-radius: 4px; margin-top: 10px; background: linear-gradient(to right, #A6BE4C, #F6DDB4, #C2374C); }
+.heatmap-labels { display: flex; justify-content: space-between; font-size: 11px; margin-top: 5px; color:#F6DDB4; }
+
+/* === MAPS === */
 .maps-container { flex: 1; display: flex; flex-direction: column; }
 #map-interactive, #map-heatmap { height: 100%; display: none; }
 #map-interactive.active, #map-heatmap.active { display: block; }
+
+/* === POPUPS === */
 .popup-content { min-width: 200px; }
-.popup-address { font-weight: 600; margin-bottom: 8px; color: #1f2937; font-size: 13px; }
-.popup-siren { font-size: 12px; color: #6b7280; margin-bottom: 8px; }
+.popup-address { font-weight: 600; margin-bottom: 8px; color: #A22D27; font-size: 13px; }
+.popup-siren { font-size: 12px; color: #5a463c; margin-bottom: 8px; }
 .popup-site { display: flex; align-items: center; gap: 5px; font-size: 12px; }
-.popup-site.has-site { color: #10b981; }
-.popup-site.no-site { color: #ef4444; }
-.popup-link { color: #667eea; text-decoration: none; font-size: 11px; display: block; margin-top: 6px; }
+.popup-site.has-site { color: #A6BE4C; }
+.popup-site.no-site { color: #A22D27; }
+.popup-link { color: #C2374C; text-decoration: none; font-size: 11px; display: block; margin-top: 6px; }
 .popup-link:hover { text-decoration: underline; }
-.loading { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 25px 40px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); z-index: 9999; text-align: center; }
-.loading-spinner { width: 40px; height: 40px; border: 3px solid #f3f3f3; border-top: 3px solid #667eea; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 12px; }
+
+/* === LOADING === */
+.loading { 
+    position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: #F6DDB4; 
+    padding: 25px 40px; border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15); 
+    z-index: 9999; text-align: center; 
+    color: #A22D27;
+}
+.loading-spinner { 
+    width: 40px; height: 40px; 
+    border: 3px solid #f3f3f3; 
+    border-top: 3px solid #A22D27; 
+    border-radius: 50%; 
+    animation: spin 1s linear infinite; 
+    margin: 0 auto 12px; 
+}
 #loading-counter { font-weight: bold; font-size: 16px; margin-top: 8px; }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 </style>
@@ -58,13 +145,13 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
 
 <div class="container">
     <div class="sidebar">
-        <h1>🗺️ Coiffeurs en Dordogne</h1>
+        <h1>💇‍♀️ Coiffeurs en Dordogne</h1>
         <p class="subtitle">Analyse de présence en ligne</p>
 
         <div class="stats">
             <div class="stat-item"><span>Total:</span><span class="stat-value" id="total-count">0</span></div>
-            <div class="stat-item"><span>Avec site web:</span><span class="stat-value" id="with-site-count" style="color:#10b981">0</span></div>
-            <div class="stat-item"><span>Sans site web:</span><span class="stat-value" id="without-site-count" style="color:#ef4444">0</span></div>
+            <div class="stat-item"><span>Avec site web:</span><span class="stat-value" id="with-site-count" style="color:#A6BE4C">0</span></div>
+            <div class="stat-item"><span>Sans site web:</span><span class="stat-value" id="without-site-count" style="color:#A22D27">0</span></div>
         </div>
 
         <div class="map-selector">
@@ -110,6 +197,7 @@ h1 { font-size: 22px; margin-bottom: 8px; font-weight: 600; }
     <p>Chargement des données...</p>
     <p id="loading-counter">000 / 000</p>
 </div>
+
 
 <script>
 let mapInteractive, mapHeatmap, markers = [], heatmapLayer, allData = [], currentFilter = 'all';

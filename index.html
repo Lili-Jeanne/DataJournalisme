@@ -1,82 +1,185 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f7f7f7;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulation après MMI – Coiffeurs Dordogne</title>
 
-        header {
-            width: 100%;
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
+<style>
+:root {
+  --rouge-framboise: #C2374C;
+  --vert-olive: #A6BE4C;
+  --beige: #F6DDB4;
+  --brun-clair: #C09473;
+  --rouge-brique: #A22D27;
+}
 
-        article {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-radius: 10px;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        .buttons {
-            display: flex;
-            gap: 20px;
-            margin: 40px 0;
-        }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--beige);
+  color: #402820;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
 
-        .buttons button {
-            padding: 15px 30px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+/* ==== FONDS DÉCORATIFS ==== */
+.background-shape {
+  position: absolute;
+  opacity: 0.08;
+  z-index: 0;
+}
 
-        .buttons button:hover {
-            opacity: 0.8;
-        }
+.bg-scissors {
+  top: 10%;
+  left: -100px;
+  width: 400px;
+  transform: rotate(-15deg);
+}
 
-        .auto-entrepreneur {
-            background-color: #2196F3;
-            color: white;
-        }
+.bg-fork {
+  bottom: 5%;
+  right: -80px;
+  width: 300px;
+  transform: rotate(20deg);
+}
 
-        .salarie {
-            background-color: #FF9800;
-            color: white;
-        }
-    </style>
+.bg-logo {
+  top: 40%;
+  right: 20%;
+  width: 250px;
+  transform: rotate(10deg);
+}
+
+/* ==== HEADER NAVIGATION ==== */
+.header-nav {
+  background: var(--rouge-brique);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.nav-link {
+  flex: 1;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  transition: background 0.3s ease;
+}
+
+.nav-link:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ==== MAIN HEADER ==== */
+header {
+  background: var(--beige);
+  color: var(--rouge-brique);
+  text-align: center;
+  padding: 50px 20px 30px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* ==== ARTICLE ==== */
+article {
+  background: white;
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+}
+
+article h2 {
+  color: var(--rouge-brique);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+article p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #3c2b25;
+  margin-bottom: 15px;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .header-nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .nav-link {
+    width: 100%;
+  }
+  
+  header h1 { 
+    font-size: 1.5rem; 
+  }
+  
+  header p {
+    font-size: 1rem;
+  }
+  
+  article { 
+    margin: 30px 15px; 
+    padding: 25px; 
+  }
+}
+</style>
 </head>
 <body>
 
-    <header>
-        <h1>Bienvenue sur notre site</h1>
-    </header>
 
-    <article>
-        <h2>Découvrez vos possibilités professionnelles</h2>
-        <p>Vous souhaitez évoluer dans votre carrière ? Que vous vouliez devenir auto-entrepreneur ou continuer en tant que salarié, nous vous proposons les informations et les outils nécessaires pour prendre la meilleure décision pour votre avenir professionnel.</p>
-    </article>
+<!-- Navigation Header -->
+<nav class="header-nav">
+  <a href="map.html" class="nav-link">Je veux être auto-entrepreneur</a>
+  <a href="salarie.html" class="nav-link">Je veux être salarié</a>
+</nav>
 
-    <div class="buttons">
-        <button class="auto-entrepreneur" onclick="window.location.href='map.html'">Je veux devenir auto-entrepreneur</button>
-        <button class="salarie" onclick="window.location.href='#'">Je veux être salarié</button>
-    </div>
+<!-- Main Header -->
+<header>
+  <h1>Vous voulez simuler votre avenir après MMI ?</h1>
+  <p>Vous êtes au bon endroit</p>
+</header>
+
+<!-- Main Article -->
+<article>
+  <h2>Découvrez vos possibilités professionnelles</h2>
+  <p>Vous souhaitez évoluer dans votre carrière ? Que vous vouliez devenir auto-entrepreneur ou continuer en tant que salarié, nous vous proposons les informations et les outils nécessaires pour prendre la meilleure décision pour votre avenir professionnel.</p>
+  
+  <p>lorem ipsus.</p>
+</article>
 
 </body>
 </html>

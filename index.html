@@ -27,6 +27,9 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ==== FONDS DÉCORATIFS ==== */
@@ -34,54 +37,6 @@ body {
   position: absolute;
   opacity: 0.08;
   z-index: 0;
-}
-
-.bg-scissors {
-  top: 10%;
-  left: -100px;
-  width: 400px;
-  transform: rotate(-15deg);
-}
-
-.bg-fork {
-  bottom: 5%;
-  right: -80px;
-  width: 300px;
-  transform: rotate(20deg);
-}
-
-.bg-logo {
-  top: 40%;
-  right: 20%;
-  width: 250px;
-  transform: rotate(10deg);
-}
-
-/* ==== HEADER NAVIGATION ==== */
-.header-nav {
-  background: var(--rouge-brique);
-  color: white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px 20px;
-  position: relative;
-  z-index: 2;
-}
-
-.nav-link {
-  flex: 1;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 10px;
-  transition: background 0.3s ease;
-}
-
-.nav-link:hover {
-  background: rgba(255,255,255,0.1);
 }
 
 /* ==== MAIN HEADER ==== */
@@ -92,17 +47,19 @@ header {
   padding: 50px 20px 30px 20px;
   position: relative;
   z-index: 2;
+  width: 100%;
+  max-width: 1000px;
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
   letter-spacing: 0.5px;
   margin-bottom: 10px;
   line-height: 1.3;
 }
 
 header p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.3rem);
   font-weight: 500;
   margin-top: 10px;
 }
@@ -111,8 +68,9 @@ header p {
 article {
   background: white;
   max-width: 850px;
-  margin: 60px auto;
-  padding: 40px;
+  width: 90%;
+  margin: 40px auto 100px auto;
+  padding: clamp(20px, 4vw, 40px);
   border-radius: 16px;
   box-shadow: 0 6px 25px rgba(0,0,0,0.1);
   position: relative;
@@ -122,50 +80,92 @@ article {
 article h2 {
   color: var(--rouge-brique);
   margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 1.5vw + 0.5rem, 1.8rem);
 }
 
 article p {
-  font-size: 16px;
+  font-size: clamp(0.95rem, 0.8vw + 0.6rem, 1rem);
   line-height: 1.7;
   color: #3c2b25;
   margin-bottom: 15px;
 }
 
+/* ==== BOUTONS ==== */
+.explore-btn {
+  position: fixed;
+  background-color: var(--rouge-brique);
+  color: var(--beige);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.explore-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.explore-btn:hover {
+  background-color: var(--rouge-framboise);
+  transform: scale(1.05);
+}
+
+/* Bouton bas droite */
+.auto-btn {
+  right: 25px;
+  bottom: 25px;
+}
+
+/* Bouton bas gauche */
+.salarie-btn {
+  left: 25px;
+  bottom: 25px;
+}
+
 /* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
-  .header-nav {
-    flex-direction: column;
-    gap: 5px;
+  article {
+    margin: 20px 10px 120px 10px;
+    padding: 20px;
   }
-  
-  .nav-link {
+
+  .explore-btn {
+    position: static;
+    width: 85%;
+    justify-content: center;
+    margin: 10px auto;
+    font-size: 0.95rem;
+  }
+
+  /* On regroupe les boutons dans un container pour mobile */
+  .button-container {
+    position: fixed;
+    bottom: 15px;
+    left: 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 20;
   }
-  
-  header h1 { 
-    font-size: 1.5rem; 
-  }
-  
-  header p {
-    font-size: 1rem;
-  }
-  
-  article { 
-    margin: 30px 15px; 
-    padding: 25px; 
+}
+
+@media (min-width: 769px) {
+  .button-container {
+    display: contents;
   }
 }
 </style>
 </head>
 <body>
-
-
-<!-- Navigation Header -->
-<nav class="header-nav">
-  <a href="map.html" class="nav-link">Je veux être auto-entrepreneur</a>
-  <a href="salarie.html" class="nav-link">Je veux être salarié</a>
-</nav>
 
 <!-- Main Header -->
 <header>
@@ -178,8 +178,29 @@ article p {
   <h2>Découvrez vos possibilités professionnelles</h2>
   <p>Vous souhaitez évoluer dans votre carrière ? Que vous vouliez devenir auto-entrepreneur ou continuer en tant que salarié, nous vous proposons les informations et les outils nécessaires pour prendre la meilleure décision pour votre avenir professionnel.</p>
   
-  <p>lorem ipsus.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus at elit et feugiat.</p>
 </article>
+
+<!-- Conteneur des boutons -->
+<div class="button-container">
+  <!-- Bouton Auto-Entrepreneur -->
+  <button class="explore-btn auto-btn" onclick="window.location.href='map.html'">
+    Je veux être auto-entrepreneur
+    <svg viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+      fill="#F6DDB4"></path>
+    </svg>
+  </button>
+
+  <!-- Bouton Salarié -->
+  <button class="explore-btn salarie-btn" onclick="window.location.href='salarie.html'">
+    Je veux être salarié
+    <svg viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+      fill="#F6DDB4"></path>
+    </svg>
+  </button>
+</div>
 
 </body>
 </html>
